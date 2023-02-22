@@ -4,7 +4,7 @@ import axios from "axios"
 
 const pageStyles = {
   color: "#232129",
-  padding: 96,
+  padding: 10,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 const headingStyles = {
@@ -19,13 +19,14 @@ const circleStyle: React.CSSProperties = {
   background: '#00ff00',
   border: '3px solid #000',
   display: 'inline-block',
-  marginRight: '10%',
+  marginRight: '5%',
   textAlign: 'center'
 }
 
 const textCircleStyle = {
   margin: 'auto',
-  lineHeight: '50px'
+  lineHeight: '50px',
+  fontWeight: 'bolder'
 }
 
 const circleStyleRed: React.CSSProperties = {
@@ -35,7 +36,7 @@ const circleStyleRed: React.CSSProperties = {
   background: '#ff0000',
   border: '3px solid #000',
   display: 'inline-block',
-  marginRight: '10%',
+  marginRight: '5%',
   textAlign: 'center'
 }
 
@@ -64,7 +65,7 @@ const IndexPage: React.FC<PageProps> = () => {
   const [numEtapasCumplidas, setNumEtapasCumplidas] = React.useState<number>(0);
   let queryParameters;
   let id_predio;
-  
+
   if (isBrowser) {
     queryParameters = new URLSearchParams(window.location.search);
     id_predio = queryParameters.get('id_predio');
@@ -89,11 +90,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
   return (
     <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Etapas del proceso
-        <br />
-        <br />
-        {numMaxEtapas.map((etapa, i) => {
+      {numMaxEtapas.map((etapa, i) => {
           if(i < numEtapasCumplidas ){
             return (<div style={circleStyle} key={i} >
               <p style={textCircleStyle}>{etapa+1}</p>
@@ -104,7 +101,6 @@ const IndexPage: React.FC<PageProps> = () => {
             </div>)
           }  
         })}
-      </h1>
     </main>
   )
 }
