@@ -4,7 +4,6 @@ import axios from "axios"
 
 const pageStyles = {
   color: "#232129",
-  padding: 10,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 const headingStyles = {
