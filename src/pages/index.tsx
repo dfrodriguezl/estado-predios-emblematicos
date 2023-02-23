@@ -54,7 +54,7 @@ type Predio = {
   NUMERO_ETAPAS_CUMPLIDAS: string
 }
 
-const urlConsultaEstados = "https://geoportal.ant.gov.co/servidor/rest/services/PrediosEmblematicos/Mapa_Predios_Emblem%C3%A1ticos/MapServer/0/query?";
+const urlConsultaEstados = "https://geoportal.ant.gov.co/hosted/rest/services/PrediosEmblematicos/MapaPrediosEmblematicos/MapServer/0/query?";
 
 // Check if window is defined (so if in the browser or in node.js).
 const isBrowser = typeof window !== "undefined"
