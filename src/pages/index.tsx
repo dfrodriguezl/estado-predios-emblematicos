@@ -117,7 +117,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
   return (
     <main style={pageStyles}>
-      <h3>{nombreProcedimiento}</h3>
+      <h4>{nombreProcedimiento}</h4>
       {numMaxEtapas.map((etapa, i) => {
           if(i < numEtapasCumplidas ){
             return (<div style={circleStyle} key={i} >
@@ -131,7 +131,7 @@ const IndexPage: React.FC<PageProps> = () => {
         })}
         {nombreProcedimiento2 !== "" ? 
         <React.Fragment>
-          <h3>{nombreProcedimiento2}</h3>
+          <h4>{nombreProcedimiento2}</h4>
           {numMaxEtapas2.map((etapa, i) => {
           if(i < numEtapasCumplidas2 ){
             return (<div style={circleStyle} key={i} >
@@ -146,7 +146,7 @@ const IndexPage: React.FC<PageProps> = () => {
         </React.Fragment> : null}
         {nombreProcedimiento3 !== "" ? 
         <React.Fragment>
-          <h3>{nombreProcedimiento3}</h3>
+          <h4>{nombreProcedimiento3}</h4>
           {numMaxEtapas3.map((etapa, i) => {
           if(i < numEtapasCumplidas3 ){
             return (<div style={circleStyle} key={i} >
